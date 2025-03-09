@@ -3,9 +3,14 @@ import LandingLayout from '../layouts/LandingLayout.astro';
 import CommandBox from '../components/CommandBox.astro';
 ---
 
-<LandingLayout title="isup - Check if a site is up" description="A simple command-line tool to check if a website is up or down">
-  <div class="text-center p-8 z-10">
-    <h1 class="text-5xl mb-6 font-bold">isup</h1>
-    <CommandBox command="curl -sSL https://raw.githubusercontent.com/shivamhwp/isup/main/install.sh | bash" />
+<LandingLayout title="isup " description="check whether sites,services or even particular pages are up, instantly">
+  <div class="flex flex-col items-center justify-center min-h-[70vh] text-center p-4 sm:p-6 md:p-8 z-10 w-full max-w-5xl mx-auto">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl mb-4 sm:mb-6 font-bold ">isup</h1>
+    <p class="text-gray-300 mb-6 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
+        check whether sites, services or even particular pages are up, instantly.
+    </p>
+    <div class="w-full mx-auto">
+      <CommandBox command="curl -sSL https://raw.githubusercontent.com/shivamhwp/isup/main/install.sh | bash" />
+    </div>
   </div>
 </LandingLayout> 
