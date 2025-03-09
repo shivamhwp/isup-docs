@@ -1,0 +1,11 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+import CommandBox from '../components/CommandBox.astro';
+---
+
+<LandingLayout title="isup - Check if a site is up" description="A simple command-line tool to check if a website is up or down">
+  <div class="text-center p-8 z-10">
+    <h1 class="text-5xl mb-6 font-bold">isup</h1>
+    <CommandBox command="curl -sSL https://raw.githubusercontent.com/shivamhwp/isup/main/install.sh | bash" />
+  </div>
+</LandingLayout> 

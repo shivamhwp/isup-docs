@@ -1,0 +1,42 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="bg-black text-white h-screen flex flex-col justify-center items-center overflow-hidden relative m-0 p-0 font-sans">
+
+    
+    <!-- Animated lines -->
+    <div class="absolute inset-0 z-[2] overflow-hidden">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    
+    <!-- Main content -->
+    <slot />
+    
+    <!-- Content sections that appear when scrolling -->
+    <div class="mt-screen bg-black text-white py-16 px-8 relative z-10">
+      <slot name="content" />
+    </div>
+  </body>
+</html> 
